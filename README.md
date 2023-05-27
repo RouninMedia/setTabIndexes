@@ -8,7 +8,7 @@ Generally, the advice on the web is to use the following values for the HTML att
 
 This technique makes use of negative integers.
 
-## HTML
+## Example HTML
 
 ```html
 <button type="button" class="maxified switch" tabindex="-3" data-tabindex-sign="-">Maxified</button>
