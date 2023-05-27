@@ -1,6 +1,13 @@
 # setTabIndexes
 A different approach to keyboard accessibility for web-apps, involving the setting and resetting of tab indexes
 
+## HTML
+
+```html
+<button type="button" class="maxified switch" tabindex="-3" data-tabindex-sign="-">Maxified</button>
+<button type="button" class="minified switch" tabindex="3" data-tabindex-sign="+">Minified</button>
+```
+
 
 ## `setTabIndexes() Function`
 
