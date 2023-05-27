@@ -11,8 +11,10 @@ This technique makes use of negative integers.
 ## Example HTML
 
 ```html
-<button type="button" class="maxified switch" tabindex="-3" data-tabindex-sign="-">Maxified</button>
-<button type="button" class="minified switch" tabindex="3" data-tabindex-sign="+">Minified</button>
+<div class="codeboxHeader --input" data-display="maxified">
+  <button type="button" class="maxified switch" tabindex="-3" data-tabindex-sign="-">Maxified</button>
+  <button type="button" class="minified switch" tabindex="3" data-tabindex-sign="+">Minified</button>
+</div>
 ```
 
 ## JavaScript (for `data-tabindex-sign` attribute)
