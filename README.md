@@ -17,7 +17,7 @@ This technique makes use of negative integers.
 </div>
 ```
 
-## JavaScript (for `data-tabindex-sign` attribute)
+## JavaScript (for updating the `data-tabindex-sign` attribute)
 ```js
 let displayHeaderSwitches = [... document.querySelectorAll('.codeboxHeader .switch')];
 
