@@ -22,7 +22,6 @@ This technique makes use of negative integers.
 let displayHeaderSwitches = [... document.querySelectorAll('.codeboxHeader .switch')];
 
 for (codeSwitch of displayHeaderSwitches) {
-
   codeSwitch.dataset.tabindexSign = (codeSwitch.dataset.tabindexSign === '-') ? '+' : '-';
 }
 ```
