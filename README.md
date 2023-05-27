@@ -15,7 +15,7 @@ This technique makes use of negative integers.
 <button type="button" class="minified switch" tabindex="3" data-tabindex-sign="+">Minified</button>
 ```
 
-## JavaScript
+## JavaScript (for `data-tabindex-sign` attribute)
 ```js
 let displayHeaderSwitches = [... document.querySelectorAll('.codeboxHeader .switch')];
 
@@ -46,6 +46,7 @@ const setTabIndexes = (selectors) => {
 
         if (tabFocusElement.closest(selector) !== null) {
         
+          // data-tabindex-sign DETERMINES WHETHER tabbingEnabled WILL BE true OR false
           tabbingEnabled = (('tabindexSign' in tabFocusElement.dataset) && (tabFocusElement.dataset.tabindexSign === '-')) ? false : true;
         }
 
