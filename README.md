@@ -10,13 +10,6 @@ This technique makes use of negative integers.
 
 ## How `setTabIndexes()` works
 
-What about:
- - `tabindex="-2"`
- - `tabindex="-4"`
- - `tabindex="-5"`
-
-???
-
 ```html
   <div class="themeSettings panel --exitRight" tabindex="-1">
     <h2 class="heading --settings">Pick Theme</h2>
