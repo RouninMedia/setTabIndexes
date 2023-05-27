@@ -10,8 +10,10 @@ This technique makes use of negative integers.
 
 ## How `setTabIndexes()` works
 
- - `1` always remains `1`: the element is *always* reachable via sequential keyboard navigation
- - `-1` always remains `-1`: the element is *never* reachable via sequential keyboard navigation
+ - `1` always remains `1`: the element is focusable and *always* reachable via sequential keyboard navigation
+ - `-1` always remains `-1`: the element is focusable but *never* reachable via sequential keyboard navigation
+ - `2` (and higher): the element is focusable and *currently* reachable via sequential keyboard navigation (but may be turned off)
+ - `-2` (and lower): the element is focusable and *currently* unreachable via sequential keyboard navigation (but may be turned on)
 
 ```html
   <div class="themeSettings panel --exitRight" tabindex="-1">
