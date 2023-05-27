@@ -8,6 +8,16 @@ A different approach to keyboard accessibility for web-apps, involving the setti
 <button type="button" class="minified switch" tabindex="3" data-tabindex-sign="+">Minified</button>
 ```
 
+## JavaScript
+```js
+let displayHeaderSwitches = [... document.querySelectorAll('.codeboxHeader .switch')];
+
+for (codeSwitch of displayHeaderSwitches) {
+
+  codeSwitch.dataset.tabindexSign = (codeSwitch.dataset.tabindexSign === '-') ? '+' : '-';
+}
+```
+
 
 ## `setTabIndexes() Function`
 
