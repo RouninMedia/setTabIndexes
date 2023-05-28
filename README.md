@@ -11,13 +11,15 @@ Notably absent from the list above are negative integers lower than `-1` such as
 
 Arguably, this advice is for an era when every UI element was simultaneously visible on the screen - that is, before screen UIs regularly featured dropdown menus, modals, dialogs etc.
 
-Essentially the advice above is for the _web of documents_. It could benefit with a (long overdue) update for the _web of apps_.
+The advice above is, essentially, written for the _web of documents_. It could benefit with a (long overdue) update for the _web of apps_.
 
-Why? Because any *tabbable* elements reachable via sequential keyboard navigation but currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ while cycling through the tabbable elements.
+Why is such an update necessary? Because any *tabbable* elements reachable via sequential keyboard navigation but currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ while cycling through the tabbable elements.
 
-This, it goes without saying, is less than desirable. It's much more intuitive for the user to be able to cycle through _only_ the tabbable elements they can see the tab focus cycling through.
+This, it goes without saying, is less than desirable. It leads to a sub-standard user experience. 
 
-To enable this kind of more intuitive user experience, this technique makes use of negative integer values, which corresponding to all the positive integer values in use. They represent those same positive integer values, but *turned off*.
+It's much more intuitive for the user to be able to cycle through _only_ the tabbable elements they can see the tab focus cycling through.
+
+To enable this kind of more intuitive user experience, the `JS` + `HTML` technique below makes use of negative alongside positive integer values. The negative values represent positive integer values which have been *turned off*.
 
 ______
 
@@ -120,37 +122,6 @@ Possible `tabindex` values:
  - `2` (and higher): the element is focusable and *currently* reachable via keyboard navigation (but may be turned off)
  - `-2` (and lower): the element is focusable and *currently* unreachable via keyboard navigation (but may be turned on)
 
-```html
-  <div class="themeSettings panel --exitRight" tabindex="-1">
-    <h2 class="heading --settings">Pick Theme</h2>
-    
-    <button type="button" class="theme none" title="Remove Theme" tabindex="-8"></button>
-
-    <button type="button" class="theme red" title="Red Theme" tabindex="-8"></button>
-    <button type="button" class="theme orange" title="Orange Theme" tabindex="-8"></button>
-    <button type="button" class="theme sand" title="Peach Theme" tabindex="-8"></button>
-
-    <button type="button" class="theme purple" title="Purple Theme" tabindex="-8"></button>
-    <button type="button" class="theme magenta" title="Magenta Theme" tabindex="-8"></button>
-    <button type="button" class="theme pink" title="Pink Theme" tabindex="-8"></button>
-    <button type="button" class="theme lightberry" title="Light Berry Theme" tabindex="-8"></button>
-
-    <button type="button" class="theme lightblue" title="Light Blue Theme" tabindex="-8"></button>
-    <button type="button" class="theme blue" title="Blue Theme" tabindex="-8"></button>
-    <button type="button" class="theme lime" title="Lime Theme" tabindex="-8"></button>
-    <button type="button" class="theme sage" title="Sage Theme" tabindex="-8"></button>
-
-    <button type="button" class="theme bluegray" title="Blue Gray Theme" tabindex="-8"></button>
-    <button type="button" class="theme taupe" title="Taupe Theme" tabindex="-8"></button>
-    <button type="button" class="theme green" title="Green Theme" tabindex="-8"></button>
-    <button type="button" class="theme teal" title="Teal Theme" tabindex="-8"></button>
-
-    <button type="button" class="settingsIcon --changePanel --back" title="Back to Previous Panel" tabindex="-9"></button>
-    <button type="button" class="settingsIcon --changePanel --forward" title="Forward to Next Panel" tabindex="-9"></button>
-    <button type="button" class="settingsIcon --close" title="Close Settings" tabindex="-9"></button>
-
-  </div>
-```
 
 ## Example HTML
 
