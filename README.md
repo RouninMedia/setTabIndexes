@@ -1,7 +1,8 @@
 # setTabIndexes
 `setTabIndexes()` represents a different approach to keyboard accessibility for web-apps, enabling dynamic resetting of tab indexes from positive to negative and vice versa.
 
-Generally, the advice (across the web) is to use the following integer values for the HTML attribute `tabindex`:
+Generally, the advice (across the web, dating back to the 2000s) is to use only the following integer values for the HTML attribute `tabindex`:
+
  - `1` (or another positive integer) | *(focusable and reachable via sequential keyboard navigation)*
  - `0` | *(focusable and reachable **after** any sequential keyboard navigation)*
  - `-1` | *(focusable but **not** reachable via sequential keyboard navigation)*
