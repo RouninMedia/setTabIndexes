@@ -13,7 +13,7 @@ Arguably, this advice is for an era when every UI element was simultaneously vis
 
 Essentially the advice above is for the _web of documents_. It could benefit with a (long overdue) update for the _web of apps_.
 
-Why? Because if we only ever use `1` (or another positive integer), `0` and `-1` as our three possible `tabindex` attribute values, then any *tabbable* element which is currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ while cycling through the tabbable elements.
+Why? Because any *tabbable* elements reachable via sequential keyboard navigation but currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ while cycling through the tabbable elements.
 
 This, it goes without saying, is less than desirable. It's much more intuitive for the user to be able to cycle through _only_ the tabbable elements they can see the tab focus cycling through.
 
