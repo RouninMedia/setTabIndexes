@@ -2,9 +2,9 @@
 A different approach to keyboard accessibility for web-apps, involving the setting and resetting of tab indexes.
 
 Generally, the advice (across the web) is to use the following integer values for the HTML attribute `tabindex`:
- - `1` (or another positive integer)
- - `0`
- - `-1`
+ - `1` (or another positive integer) | *(focusable and reachable via sequential keyboard navigation)*
+ - `0` | *(focusable and reachable **after** any sequential keyboard navigation)*
+ - `-1` | *(focusable but **not** reachable via sequential keyboard navigation)*
 
 Arguably this is advice for an era when every UI element was simultaneously visible on the screen and before screen UIs regularly featured dropdown menus, modals, dialogs etc.
 
