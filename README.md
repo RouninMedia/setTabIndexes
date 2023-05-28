@@ -9,7 +9,9 @@ Generally, the advice (across the web, dating back to the 2000s) is to use only 
 
 Notably absent from the list above are negative integers lower than `-1` such as `-2`, `-3`, `-4` etc.
 
-Arguably, the advice is for an era when every UI element was simultaneously visible on the screen and before screen UIs regularly featured dropdown menus, modals, dialogs etc.
+Arguably, this advice is for an era when every UI element was simultaneously visible on the screen and before screen UIs regularly featured dropdown menus, modals, dialogs etc.
+
+Essentially the advice above is for the _web of documents_. It could benefit with a (long overdue) update for the _web of apps_.
 
 Why? Because if we only ever use `1` (or another positive integer), `0` and `-1` as our three possible `tabindex` attribute values, then any *tabbable* element which is currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ while cycling through the tabbable elements.
 
