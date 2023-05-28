@@ -36,7 +36,7 @@ const setTabIndexes = (selectors) => {
 
         if (tabFocusElement.closest(selector) !== null) {
         
-          // data-tabindex-sign DETERMINES WHETHER tabbingEnabled WILL BE true OR false
+          // data-tabindex-sign="-" INDICATES THAT ON ANY ELEMENT WHERE tabbingEnabled WOULD OTHERWISE BE SET TO true, IT WILL BE SET TO false
           tabbingEnabled = (('tabindexSign' in tabFocusElement.dataset) && (tabFocusElement.dataset.tabindexSign === '-')) ? false : true;
         }
 
