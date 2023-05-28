@@ -1,5 +1,5 @@
 # setTabIndexes
-A different approach to keyboard accessibility for web-apps, involving the setting and resetting of tab indexes.
+A different approach to keyboard accessibility for web-apps, enabling dynamic resetting of tab indexes from positive to negative and vice versa.
 
 Generally, the advice (across the web) is to use the following integer values for the HTML attribute `tabindex`:
  - `1` (or another positive integer) | *(focusable and reachable via sequential keyboard navigation)*
