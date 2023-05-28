@@ -6,7 +6,9 @@ Generally, the advice (across the web) is to use the following integer values fo
  - `0` | *(focusable and reachable **after** any sequential keyboard navigation)*
  - `-1` | *(focusable but **not** reachable via sequential keyboard navigation)*
 
-Arguably this is advice for an era when every UI element was simultaneously visible on the screen and before screen UIs regularly featured dropdown menus, modals, dialogs etc.
+Notably absent from the list above are negative integers lower than `-1` such as `-2`, `-3`, `-4` etc.
+
+Arguably, the advice is for an era when every UI element was simultaneously visible on the screen and before screen UIs regularly featured dropdown menus, modals, dialogs etc.
 
 Why? Because if we only ever use `1` (or another positive integer), `0` and `-1` as our three possible `tabindex` attribute values, then any *tabbable* element which is currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ while cycling through the tabbable elements.
 
