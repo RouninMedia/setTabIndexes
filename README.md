@@ -8,9 +8,11 @@ Generally, the advice (across the web) is to use the following integer values fo
 
 Arguably this is advice for an era when every UI element was simultaneously visible on the screen and before screen UIs regularly featured dropdown menus, modals, dialogs etc.
 
-Why? Because if we only use `1`, `0` and `-1` as our `tabindex` attribute values, 
+Why? Because if we only ever use `1` (or another positive integer), `0` and `-1` as our three possible `tabindex` attribute values, then any *tabbable* element which is currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ while cycling through the tabbable elements.
 
-This technique makes use of negative integer values, which represent positive integer values, but *turned off*.
+This, it goes without saying, is less than desirable. It's much more intuitive for the user to be able to cycle through _only_ the tabbable elements they can see the tab focus cycling through.
+
+To enable this kind of more intuitive user experience, this technique makes use of negative integer values, which corresponding to all the positive integer values in use. They represent those same positive integer values, but *turned off*.
 
 ______
 
