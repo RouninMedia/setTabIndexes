@@ -19,7 +19,7 @@ This, it goes without saying, is less than desirable. It leads to a sub-standard
 
 It's much more intuitive for the user to be able to cycle through _only_ those tabbable elements they can see the **tab focus** cycling through.
 
-The `JS` + `HTML` technique below enables this more intuitive user experience, by taking advantage of negative alongside positive integer values.
+The `JS` + `HTML` technique below enables this more intuitive user experience. It does so by taking advantage of negative alongside positive integer values.
 
 In a nutshell, the negative values represent positive integer values which have been *turned off*.
 
