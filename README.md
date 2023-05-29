@@ -83,7 +83,7 @@ const setTabIndexes = (selectors) => {
 
 _______
 
-## Example HTML
+## Markup for an example Modal Panel
 
 ```html
   <div class="themeSettings panel --activePanel" tabindex="-1">
