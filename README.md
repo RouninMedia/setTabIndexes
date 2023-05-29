@@ -15,11 +15,13 @@ The advice above is, essentially, written for the _web of documents_. It could b
 
 Why might such a reformulation be necessary? Because, when only the three values above are in use, any *tabbable* elements reachable via sequential keyboard navigation but currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ whenever the user cycles through the tabbable elements.
 
-This, it goes without saying, is less than desirable. It leads to a sub-standard user experience. 
+This, it goes without saying, is less than desirable: it leads to a sub-standard, less than intuitive, possibly confusing user experience. 
 
 It's much more intuitive for the user to be able to cycle through _only_ those tabbable elements they can see the **tab focus** cycling through.
 
-The `JS` + `HTML` technique below enables this more intuitive user experience. It does so by taking advantage of negative alongside positive integer values.
+The `JS` + `HTML` technique below enables this more intuitive user experience.
+
+It does so by allowing for negative integer values alongside positive values.
 
 In a nutshell, the negative values represent positive integer values which have been *turned off*.
 
