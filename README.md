@@ -25,6 +25,14 @@ It does so by allowing for negative integer values alongside positive values.
 
 In a nutshell, the negative values represent positive integer values which have been *turned off*.
 
+
+### Possible `tabindex` values:
+
+ - a value of `1` never changes: the element is focusable and *always* reachable via sequential keyboard navigation
+ - a value of `-1` never changes: the element is focusable but *never* reachable via sequential keyboard navigation
+ - `2` (and higher): the element is focusable and *currently* reachable via keyboard navigation (but may be turned off)
+ - `-2` (and lower): the element is focusable and *currently* unreachable via keyboard navigation (but may be turned on)
+
 ______
 
 ## The `setTabIndexes() Function`
@@ -122,16 +130,6 @@ What happens then in the markup snippet above?
  - all the `tabindex="-9"` attributes become `tabindex="9"`
  - the `tabindex="-1"` attribute remains `tabindex="-1"`
  - elsewhere, across the app, all positive `tabindex` values become negative `tabindex` values // <= IS THIS RIGHT ?
-
-
-
-
-Possible `tabindex` values:
-
- - a value of `1` never changes: the element is focusable and *always* reachable via sequential keyboard navigation
- - a value of `-1` never changes: the element is focusable but *never* reachable via sequential keyboard navigation
- - `2` (and higher): the element is focusable and *currently* reachable via keyboard navigation (but may be turned off)
- - `-2` (and lower): the element is focusable and *currently* unreachable via keyboard navigation (but may be turned on)
 
 
 ## Example HTML
