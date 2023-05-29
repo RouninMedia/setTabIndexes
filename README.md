@@ -128,7 +128,7 @@ What happens then in the markup snippet above (and in the app surrounding it)?
 
  - all `tabindex="1"` attributes across the app remain `tabindex="1"`
  - all `tabindex="-1"` attributes across the app remain `tabindex="-1"`
- - any `tabindex` values within the scope of the _selectors_ (`.themeSettings`) which include the attribute `data-tabindex-sign="-"` become negative
+ - `tabindex` values within the _selectors_ scope (`.themeSettings`) which include the attribute `data-tabindex-sign="-"` become negative
  - all other `tabindex` values within the scope of the selectors become positive: `tabindex="-8"` / `tabindex="-9"` attributes become `tabindex="8"` / `tabindex="9"` etc.
  - elsewhere, across the app, all other `tabindex` values become negative
 
