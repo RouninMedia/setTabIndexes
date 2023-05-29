@@ -86,7 +86,7 @@ _______
 ## Example HTML
 
 ```html
-  <div class="themeSettings panel --exitRight" tabindex="-1">
+  <div class="themeSettings panel --activePanel" tabindex="-1">
     <h2 class="heading --settings">Pick Theme</h2>
     
     <button type="button" class="theme none" title="Remove Theme" tabindex="-8"></button>
