@@ -120,7 +120,7 @@ ______
 
 ## How `setTabIndexes()` works
 
-We can run the setTabIndexes() function on the `HTML` above, via:
+We can run the `setTabIndexes()` function on the `HTML` above, via:
 
     setTabIndexes('.themeSettings');
 
@@ -128,9 +128,19 @@ What happens then in the markup snippet above (and in the app surrounding it)?
 
  - all `tabindex="1"` attributes across the app remain `tabindex="1"`
  - all `tabindex="-1"` attributes across the app remain `tabindex="-1"`
- - `tabindex` values adjacent to the attribute `data-tabindex-sign="-"` within the _selectors_ scope (`.themeSettings`) become negative
- - all other `tabindex` values within the _selectors_ scope become positive: `tabindex="-8"` becomes `tabindex="8"` etc.
+ - `tabindex` values within the _selectors_ scope become positive: `tabindex="-8"` becomes `tabindex="8"` etc.
  - elsewhere, across the app, all other `tabindex` values become negative
+
+_____
+
+## One more thing...
+
+When the `setTabIndexes()` function is fired, elements with `tabindex` values within the _selectors_ scope are normally all *turned on*.
+
+Exceptionally, elements may be instructed to remain _turned off_ _**if**_ those elements also, explicitly, contain the attribute: `data-tabindex-sign="-"`
+
+ - `tabindex` values adjacent to the attribute `data-tabindex-sign="-"` within the _selectors_ scope (`.themeSettings`) become negative
+
 
 
 ## Example HTML
