@@ -1,5 +1,5 @@
 # setTabIndexes
-`setTabIndexes()` represents a different approach to keyboard accessibility for web-apps, enabling dynamic resetting of tab indexes from positive to negative and vice versa.
+`setTabIndexes()` represents a different approach to keyboard accessibility for web-apps, enabling dynamic resetting of tab indexes from positive to negative and vice versa for different *zones* (modals, dialogs, dropdown menus etc.) across the app.
 
 Generally, the advice (across the web, dating back to the 2000s) is to use only the following integer values for the HTML attribute `tabindex`:
 
@@ -11,15 +11,17 @@ Notably absent from the list above are negative integers lower than `-1` such as
 
 Arguably, this advice is for an era when every UI element was simultaneously visible on the screen - that is, before screen UIs regularly featured dropdown menus, modals, dialogs etc.
 
-The advice above is, essentially, written for the _web of documents_. It could benefit with a (long overdue) update for the _web of apps_.
+The advice above is, essentially, written for the _web of documents_. It could benefit with a (long overdue) reformulation for the _web of apps_.
 
-Why is such an update necessary? Because any *tabbable* elements reachable via sequential keyboard navigation but currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ while cycling through the tabbable elements.
+Why might such a reformulation be necessary? Because, when only the three values above are in use, any *tabbable* elements reachable via sequential keyboard navigation but currently outside the viewport in some way (or in some form hidden from or not visible to the user), will _still need to be tabbed through_ whenever the user cycles through the tabbable elements.
 
 This, it goes without saying, is less than desirable. It leads to a sub-standard user experience. 
 
-It's much more intuitive for the user to be able to cycle through _only_ the tabbable elements they can see the tab focus cycling through.
+It's much more intuitive for the user to be able to cycle through _only_ those tabbable elements they can see the **tab focus** cycling through.
 
-To enable this kind of more intuitive user experience, the `JS` + `HTML` technique below makes use of negative alongside positive integer values. The negative values represent positive integer values which have been *turned off*.
+The `JS` + `HTML` technique below enables this more intuitive user experience, by taking advantage of negative alongside positive integer values.
+
+In a nutshell, the negative values represent positive integer values which have been *turned off*.
 
 ______
 
